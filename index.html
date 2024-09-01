@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>James Michelle</title>
+    <style>
+      /* Reset margin and padding for all elements */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Remove text decoration from links */
+      a {
+        text-decoration: none;
+      }
+
+      /* Navbar styling */
+      .navbar {
+        background: #000;
+        color: #fff;
+        text-align: center;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: 12px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 24px;
+        overflow: hidden;
+        z-index: 1000;
+      }
+
+      .navbar p {
+        position: absolute;
+        width: 100%;
+        opacity: 0;
+        transform: translateX(100%);
+        animation: none;
+        margin-top: 4px;
+      }
+
+      .navbar p.active {
+        animation: slideIn 3s ease-in-out forwards;
+      }
+
+      /* Keyframes for sliding animation */
+      @keyframes slideIn {
+        0% {
+          opacity: 0;
+          transform: translateX(100%);
+        }
+        25% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+        75% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+        100% {
+          opacity: 0;
+          transform: translateX(-100%);
+        }
+      }
+
+      /* Menu bar styling */
+      menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        position: fixed;
+        top: 24px;
+        width: 100%;
+        background-color: #fff;
+        z-index: 999;
+        padding: 10px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      menu .bar_code {
+        font-size: 28px;
+        cursor: pointer;
+      }
+
+      menu .james_michelle {
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 5px;
+        color: #000;
+      }
+
+      menu .shop {
+        font-size: 18px;
+      }
+
+      /* Container for navigation items */
+      #navContainer {
+        display: none;
+        flex-direction: row;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        padding: 18px;
+        background-color: #fff;
+        position: fixed;
+        top: 74px;
+        width: 100%;
+        z-index: 998;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        scrollbar-width: none;
+      }
+
+      #navContainer::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Body padding to adjust for fixed nav and menu */
+      body {
+        padding-top: 120px;
+      }
+
+      /* Hero section styling */
+      .hero_section {
+        position: relative;
+        background-image: url("image/hero.png");
+        background-repeat: no-repeat;
+        height: 90vh;
+        margin-top: -40px;
+      }
+
+      .hero_section .hero_text {
+        width: 100%;
+        color: #fff;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .hero_section .hero-pera {
+        position: absolute;
+        bottom: 20px;
+        color: #fff;
+        text-align: center;
+        margin: 0 20px;
+      }
+
+      .shop_btn {
+        background-color: #000;
+        color: #fff;
+        font-weight: 400;
+        text-transform: uppercase;
+        padding: 8px 38px;
+        border: none;
+      }
+
+      /* Card section styling */
+      .card_section {
+        display: flex;
+        margin-top: 20px;
+        gap: 12px;
+        overflow: hidden;
+        margin-bottom: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <p>
+        <span style="text-transform: uppercase">Sale alert:</span> 30% Off
+        Sitewide
+      </p>
+      <p>
+        Code: <span style="text-transform: uppercase">memorial30</span> - 20%
+        off Fine
+      </p>
+      <p>Code: <span style="text-transform: uppercase">fine20</span></p>
+    </nav>
+
+    <!-- Menu bar -->
+    <menu>
+      <div class="bar_code">≡</div>
+      <div><a href="#" class="james_michelle">james michelle</a></div>
+      <div><p class="shop">🛒</p></div>
+    </menu>
+
+    <!-- Hero section -->
+    <section>
+      <div class="hero_section">
+        <div class="hero_text">
+          <p style="margin-right: 138px">up to</p>
+          <p style="font-size: 44px; text-transform: uppercase">
+            30% Off <br />
+            Sitewide
+          </p>
+          <p style="margin-top: 12px; margin-bottom: 18px">
+            <span style="color: #e3e3de">30% off Sitewide |</span> Code:
+            <span style="text-decoration: underline">MEMORIAL30</span> <br />
+            <span style="color: #e3e3de">20% Off Fine |</span> Code:
+            <span style="text-decoration: underline">FINE20</span>
+          </p>
+          <button class="shop_btn">Shop The Sale</button>
+        </div>
+        <p class="hero-pera">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda,
+          eligendi.
+        </p>
+      </div>
+    </section>
+
+    <!-- Card section -->
+    <section class="card_section">
+      <a
+        href="necklaces-page.html"
+        style="text-decoration: none; color: inherit"
+      >
+        <div>
+          <img
+            src="image/necklaces.png"
+            alt="necklaces"
+            style="background-color: #f0efed"
+          />
+          <p
+            style="
+              text-transform: uppercase;
+              text-align: center;
+              margin-top: 12px;
+            "
+          >
+            Necklaces
+          </p>
+        </div>
+      </a>
+      <a
+        href="personalized-page.html"
+        style="text-decoration: none; color: inherit"
+      >
+        <div>
+          <img
+            src="image/personalized.png"
+            alt="personalized"
+            style="background-color: #f0efed"
+          />
+          <p
+            style="
+              text-transform: uppercase;
+              text-align: center;
+              margin-top: 12px;
+            "
+          >
+            Personalized
+          </p>
+        </div>
+      </a>
+      <a href="rings-page.html" style="text-decoration: none; color: inherit">
+        <div>
+          <img
+            src="image/rings.png"
+            alt="rings"
+            style="background-color: #f0efed"
+          />
+          <p
+            style="
+              text-transform: uppercase;
+              text-align: center;
+              margin-top: 12px;
+            "
+          >
+            Rings
+          </p>
+        </div>
+      </a>
+    </section>
+
+    <!-- JavaScript for dynamic behavior -->
+    <script>
+      // Handle sliding effect for navbar messages
+      const paragraphs = document.querySelectorAll(".navbar p");
+      let currentIndex = 0;
+
+      function showNextParagraph() {
+        paragraphs[currentIndex].classList.remove("active");
+        currentIndex = (currentIndex + 1) % paragraphs.length;
+        paragraphs[currentIndex].classList.add("active");
+      }
+
+      setInterval(showNextParagraph, 4000);
+
+      // Create the navigation container dynamically
+      const navContainer = document.createElement("div");
+      navContainer.id = "navContainer";
+
+      const items = [
+        {
+          imgSrc: "image/best-sellers.png",
+          text: "Best Sellers",
+          link: "#link1",
+        },
+        { imgSrc: "image/new.png", text: "New", link: "#link2" },
+        { imgSrc: "image/necklaces.png", text: "Necklaces", link: "#link3" },
+        { imgSrc: "image/rings.png", text: "Ring", link: "#link4" },
+        { imgSrc: "image/bracelets.png", text: "Bracelets", link: "#link5" },
+        {
+          imgSrc: "image/personalized.png",
+          text: "Personalized",
+          link: "#link6",
+        },
+        { imgSrc: "image/fine.png", text: "Fine", link: "#link7" },
+        { imgSrc: "image/clearance.png", text: "Clearance", link: "#link8" },
+      ];
+
+      items.forEach((item) => {
+        const link = document.createElement("a");
+        link.href = item.link;
+        link.style.display = "block";
+        link.style.textAlign = "center";
+        link.style.marginRight = "16px";
+        link.style.textDecoration = "none";
+        link.style.color = "#000";
+
+        const img = document.createElement("img");
+        img.src = item.imgSrc;
+        img.style.background = "#F1EFEE";
+        img.style.width = "100px";
+        img.style.height = "100px";
+        img.style.borderRadius = "50%";
+
+        const text = document.createElement("span");
+        text.innerText = item.text;
+        text.style.display = "block";
+        text.style.marginTop = "5px";
+        text.style.fontSize = "12px";
+
+        link.appendChild(img);
+        link.appendChild(text);
+        navContainer.appendChild(link);
+      });
+
+      document.body.insertBefore(navContainer, document.body.children[1]);
+
+      // Toggle visibility of the navContainer
+      const barCode = document.querySelector(".bar_code");
+      barCode.addEventListener("click", (event) => {
+        event.stopPropagation();
+        navContainer.style.display =
+          navContainer.style.display === "flex" ? "none" : "flex";
+      });
+
+      // Hide navContainer when clicking outside of it
+      document.addEventListener("click", (event) => {
+        if (
+          !navContainer.contains(event.target) &&
+          !barCode.contains(event.target)
+        ) {
+          navContainer.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
